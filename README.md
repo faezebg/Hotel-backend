@@ -32,4 +32,4 @@ Backend for a simple hotel reservation system built with Django and Django REST 
 - `api/reservations/` — create and manage reservations
 
 ---
-Project prepared for repository import with concise commits and documentation.
+
