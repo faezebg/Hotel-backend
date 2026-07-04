@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 30px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 500px;
+        }
+        .available {
+            color: green;
+            font-weight: bold;
+        }
+        .unavailable {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Room {{ room.room_number }}</h1>
+
+    <p><strong>Hotel:</strong> {{ room.hotel.name }}</p>
+    <p><strong>City:</strong> {{ room.hotel.city }}</p>
+    <p><strong>Capacity:</strong> {{ room.capacity }}</p>
+    <p><strong>Price per night:</strong> {{ room.price_per_night }}</p>
+
+    {% if room.is_available %}
+        <p class="available">Status: Available</p>
+    {% else %}
+        <p class="unavailable">Status: Not available</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
